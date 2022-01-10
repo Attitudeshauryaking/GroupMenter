@@ -74,31 +74,40 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hey there! My name is Group Menter.
-I'm here to help you manage your groups!
+[⚡](https://telegra.ph/file/d557014e0d13375d3984e.jpg) ℍ𝕖𝕝𝕝𝕠 𝕀'𝕞 [۩ 𝕋ℍ𝕆ℝ ۩ ](@king_thor_robot)
+•❅─────✧❅✦❅✧─────❅•
+┏━━━━━━━━━━━━━━━━━┓
+┣★🔰𝔸 𝔸𝕕𝕧𝕒𝕟𝕔𝕖𝕕 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 𝔾𝕣𝕠𝕦𝕡 𝕙𝕒𝕟𝕕𝕝𝕖𝕣 𝔹𝕠𝕥 𝕨𝕚𝕥𝕙 𝕔𝕠𝕠𝕝 𝔽𝕖𝕒𝕥𝕦𝕣𝕖𝕤.
+┣★🔥𝕐𝕠𝕦 𝕔𝕒𝕟 𝕦𝕤𝕖 𝕞𝕖 𝕚𝕟 ℂ𝕙𝕒𝕟𝕟𝕖𝕝 𝕒𝕝𝕤𝕠
+┣★🔥𝕋𝕙𝕒𝕟𝕜𝕤 𝕗𝕠𝕣 𝕦𝕤𝕚𝕟𝕘 ➢𝐎𝐀𝐍
+┣★🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 : [⚡𝔸𝕋𝕋𝕀𝕋𝕌𝔻𝔼 ℕ𝔼𝕋𝕎𝕆ℝ𝕂⚡](HTTPS://T.ME/Attitude_Network)
+┣★ ℍ𝕚𝕥 𝕗𝕠𝕣 𝕥𝕠𝕠𝕝𝕤 ☛ /help
+┗━━━━━━━━━━━━━━━━┛
 
-Hit /help to find out more about how to use me to my full potential.
+🔥𝐎𝐖𝐍𝐄𝐑🔥 : @ItsAttitudeking
+
+•❅─────✧❅✦❅✧─────❅•
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD TO YOUR GROUP ➕️", url="https://t.me/GroupMenterRobot?startgroup=true"),
+            text="➕️𝐀𝐃𝐃 𝐓𝐇𝐎𝐑 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕️", url="https://t.me/king_thor_robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="Updates", url="https://t.me/GroupMenterUpdates"),
-        InlineKeyboardButton(text="Support", url="https://t.me/GroupMenterGroup"),
+        InlineKeyboardButton(text="𝐔𝐏𝐃𝐀𝐓𝐄𝐒🔊", url="https://t.me/attitude_Network"),
+        InlineKeyboardButton(text="𝐒𝐔𝐏𝐏𝐎𝐑𝐓🛎️", url="https://t.me/OAN_Support"),
     ],
     [
         InlineKeyboardButton(
-            text="Commands ❔", callback_data="help_back"
+            text="★𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒★", callback_data="help_back"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-Hey There! My name is Group Menter.
+Hey There! My name is THOR [⚡](https://telegra.ph/file/d557014e0d13375d3984e.jpg).
 I'm here to help you manage your groups!
 
 Commands available:
@@ -114,9 +123,9 @@ DONATE_STRING = """Hey Thanks for your thought of donating me!
 When you donate, all the fund goes towards my development which makes on fast and responsive.
 Your donation might also me get me a new feature or two, which I wasn't able to get due to server limitations.
 
-All the fund would be put into my services such as database, storage and hosting!.
+All the fund would be put into my services such as database, storage and hosting!.🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 : @Attitude_Network
 
-You Can donate to this bot via [PayPal](paypal.me/vivektvp) Or [Buy Me a Coffee.](https://ko-fi.com/VIVEKTP)"""
+You Can donate to this bot at [ཧᜰ꙰ꦿ➢𝐎𝐀𝐍༒☛](t.me/ItsAttitudeking)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -361,7 +370,7 @@ def groupmenter_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "groupmenter":
         query.message.edit_text(
-            text=""" 🤖 I'm *Group Menter*, a powerful group management bot built to help you manage your group easily.
+            text=""" 🤖 I'm *THOR*, a powerful group management bot built to help you manage your group easily.
                  
 ❍ I can restrict users.
                  
@@ -375,8 +384,8 @@ def groupmenter_about_callback(update: Update, context: CallbackContext):
                  
 ❍ I check for admins' permissions before executing any command and more stuffs
                  \n_Group Menter's licensed under the GNU General Public License v3.0_
-                 Here is the [💾Repository](https://github.com/TeamGroupMenter/GroupMenter).
-                 If you have any question about Group Menter, let us know at @GroupMenterUpdates.""",
+                 Here is the [💾Repository](https://github.com/ItsAttitudeking).
+                 If you have any question about Group Menter, let us know at @OAN_Support .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -402,8 +411,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Group Menter*
-                 \nHere is the [Source Code](https://github.com/TeamGroupMenter/GroupMenter) .""",
+            text=""" Hi..🤗 I'm *THOR*
+                 \nHere is the [Source Code](https://github.com/ItsAttitudeking) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
