@@ -1,5 +1,5 @@
 # Pyrogram Module For Download Song From YouTube 
-# 🍀 © @TeamGroupMenter,@Mr_Dark_Prince
+# 🍀 © @OAN_Support
 # ⚠️ Do not edit this lines
 import os
 import requests
