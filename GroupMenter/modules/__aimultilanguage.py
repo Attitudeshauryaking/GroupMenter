@@ -1,5 +1,4 @@
-# credits @RoseLoverX @InukaASiTH
-# Credits @Mr_dark_prince
+
 from GroupMenter import OWNER_ID, BOT_ID
 from GroupMenter import telethn as tbot
 import GroupMenter.modules.sql.aihelp_sql as sql
