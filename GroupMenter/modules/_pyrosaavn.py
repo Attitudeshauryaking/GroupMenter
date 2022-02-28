@@ -1,4 +1,4 @@
-# Thanks to @infinity_bots - Williambutcherbot
+
 import os
 
 import requests
