@@ -11,8 +11,8 @@ from GroupMenter.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
     "Telegram": "https://api.telegram.org",
-    "Kaizoku": "https://animekaizoku.com",
-    "Kayo": "https://animekayo.com",
+    "AttitudeNetwork": "https://animekaizoku.com",
+    "OAN": "https://animekayo.com",
     "Jikan": "https://api.jikan.moe/v3",
 }
 
@@ -58,7 +58,7 @@ def ping_func(to_ping: List[str]) -> List[str]:
 
         pinged_site = f"<b>{each_ping}</b>"
 
-        if each_ping == "Kaizoku" or each_ping == "Kayo":
+        if each_ping == "AttitudeNetwork" or each_ping == "OAN":
             pinged_site = f'<a href="{sites_list[each_ping]}">{each_ping}</a>'
             ping_time = f"<code>{ping_time} (Status: {r.status_code})</code>"
 
@@ -74,13 +74,13 @@ def ping(update: Update, context: CallbackContext):
     msg = update.effective_message
 
     start_time = time.time()
-    message = msg.reply_text("Pinging...")
+    message = msg.reply_text("Connecting to Attitude Network.....")
     end_time = time.time()
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     uptime = get_readable_time((time.time() - StartTime))
 
     message.edit_text(
-        "PONG!!\n"
+        "[⚜️](https://telegra.ph/file/fec8d6e4dda9a8de39ae4.jpg)PONG!!\n"
         "<b>Time Taken:</b> <code>{}</code>\n"
         "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
@@ -90,12 +90,12 @@ def ping(update: Update, context: CallbackContext):
 @run_async
 @sudo_plus
 def pingall(update: Update, context: CallbackContext):
-    to_ping = ["Kaizoku", "Kayo", "Telegram", "Jikan"]
+    to_ping = ["AttitudeNetwork", "OAN", "Telegram", "Jikan"]
     pinged_list = ping_func(to_ping)
     pinged_list.insert(2, "")
     uptime = get_readable_time((time.time() - StartTime))
 
-    reply_msg = "⏱Ping results are:\n"
+    reply_msg = "[⏱](https://telegra.ph/file/fec8d6e4dda9a8de39ae4.jpg)Ping results are:\n"
     reply_msg += "\n".join(pinged_list)
     reply_msg += "\n<b>Service uptime:</b> <code>{}</code>".format(uptime)
 
