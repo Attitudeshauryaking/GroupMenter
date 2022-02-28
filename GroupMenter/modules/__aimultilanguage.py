@@ -13,8 +13,8 @@ from telethon import events
 from GroupMenter.events import register
 
 string = (
-  "I belong To [My Channel](https://t.me/GroupMenter)!",
-  "Im Fairly Yound And Was Made by mr_dark_prince!",
+  "I belong To [My Channel](https://t.me/attitude_Network)!",
+  "I m Thor And Was Made by @itsattitudeking !",
 )
 
 
